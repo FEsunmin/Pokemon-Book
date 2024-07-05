@@ -6,7 +6,7 @@ const detailUrl = process.env.API_DETAIL_URL;
 
 const getPokemonData = async (id: string): Promise<Pokemon> => {
   const response = await axios.get(
-    `pokemon-book-xi.vercel.app/api/pokemons/${id}`
+    `https://pokemon-book-xi.vercel.app/api/pokemons/${id}`
   );
   return response.data;
 };
