@@ -2,8 +2,12 @@ import React from "react";
 import axios from "axios";
 import { Pokemon } from "@/types/pokemon";
 
+const detailUrl = process.env.API_DETAIL_URL;
+
 const getPokemonData = async (id: string): Promise<Pokemon> => {
-  const response = await axios.get(`http://localhost:3001/api/pokemons/${id}`);
+  const response = await axios.get(
+    `pokemon-book-xi.vercel.app/api/pokemons/${id}`
+  );
   return response.data;
 };
 
