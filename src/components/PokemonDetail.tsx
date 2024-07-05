@@ -1,17 +1,6 @@
 import React from "react";
 import axios from "axios";
-
-type Pokemon = {
-  id: number;
-  name: string;
-  korean_name: string;
-  height: number;
-  weight: number;
-  sprites: { front_default: string };
-  types: { type: { name: string; korean_name: string } }[];
-  abilities: { ability: { name: string; korean_name: string } }[];
-  moves: { move: { name: string; korean_name: string } }[];
-};
+import { Pokemon } from "@/types/pokemon";
 
 const getPokemonData = async (id: string): Promise<Pokemon> => {
   const response = await axios.get(`http://localhost:3001/api/pokemons/${id}`);
